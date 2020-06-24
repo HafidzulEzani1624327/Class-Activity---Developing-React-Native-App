@@ -13,15 +13,18 @@ export default class WordAnalyzer extends Component {
     }
   }
 
-    wordAnalyze  = () => {
-      this.setState({letters: (this.state.word.split('')) });
+    wordAnalyze  = () => { 
+      this.setState({letters: (this.state.word.split(''))},
       
+      () => { 
       var i=0;
       var vow =0;
       var cons = 0;
       var cha =0;
       
-        () =>{
+        
+          
+          
           for ( i=0; i<=this.state.word.length; i++){
       
           if(this.state.letters[i] == 'a'||this.state.letters[i] == 'A'||
@@ -65,11 +68,12 @@ export default class WordAnalyzer extends Component {
                 cha++;
                 this.setState({characters: Number((this.state.word.length - cha +1))});
               }
+            
             }
-       
+          });
     }
       
-    }
+
 
   
   render(){
