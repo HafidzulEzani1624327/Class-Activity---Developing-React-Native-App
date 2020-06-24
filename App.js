@@ -14,8 +14,10 @@ export default class WordAnalyzer extends Component {
   }
 
     wordAnalyze  = () => { 
-      this.setState({letters: (this.state.word.split(''))},
+
+      this.setState({letters: (this.state.word.split(''))} ,
       
+      /*callback function*/
       () => { 
       var i=0;
       var vow =0;
@@ -37,7 +39,7 @@ export default class WordAnalyzer extends Component {
                 this.setState({vowel: Number((vow))});
               }
           
-          else if(this.state.letters[i] == 'b'||this.state.letters[i] == 'A'||
+          else if(this.state.letters[i] == 'b'||this.state.letters[i] == 'B'||
           this.state.letters[i] == 'c'||this.state.letters[i] == 'C'||
           this.state.letters[i] == 'd'||this.state.letters[i] == 'D'||
           this.state.letters[i] == 'e'||this.state.letters[i] == 'E'||
