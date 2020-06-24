@@ -21,7 +21,8 @@ export default class WordAnalyzer extends Component {
       var cons = 0;
       var cha =0;
       
-        for ( i=0; i<=this.state.word.length; i++){
+        () =>{
+          for ( i=0; i<=this.state.word.length; i++){
       
           if(this.state.letters[i] == 'a'||this.state.letters[i] == 'A'||
             this.state.letters[i] == 'e'||this.state.letters[i] == 'E'||
@@ -64,6 +65,7 @@ export default class WordAnalyzer extends Component {
                 cha++;
                 this.setState({characters: Number((this.state.word.length - cha +1))});
               }
+            }
        
     }
       
